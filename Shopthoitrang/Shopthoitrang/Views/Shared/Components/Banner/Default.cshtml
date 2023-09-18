@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BannerModels>
+
+@foreach (var item in Model)
+{
+    <div class="item active">
+        <div class="row">
+
+            <div class="col-sm-12 ">
+                <!-- Image on the right side -->
+                <img src="~/images/Banner/@item.Imgpath" class="girl img-responsive" alt="" />
+            </div>
+        </div>
+    </div>
+}

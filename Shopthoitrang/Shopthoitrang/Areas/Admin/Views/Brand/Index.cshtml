@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Shopthoitrang.Models.BrandModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1 class="alert alert-success">Quản lý Thương hiệu sản phẩm</h1>
+<p>
+    <a asp-action="Create" class="btn btn-success m-r-5">Thêm mới </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã 
+            </th>
+            <th>
+                Tên thương hiệu
+            </th>
+            <th>
+                Mô tả
+            </th>
+            <th>
+                Slug
+            </th>
+            <th>
+                Trạng thái
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info btn-tone m-r-5">Sửa</a>
+                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-secondary btn-tone m-r-5">Xem</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger btn-tone m-r-5">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

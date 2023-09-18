@@ -1,0 +1,73 @@
+﻿@using Shopthoitrang.Models.ViewModels;
+@model CartviewModel
+<section id="cart_items">
+	<div class="container">
+		<div class="breadcrumbs">
+			<ol class="breadcrumb">
+				<li><a asp-action="Index" asp-controller="Home">Home</a></li>
+				<li class="active">Cart</li>
+			</ol>
+		</div>
+		<div class="table-responsive cart_info">
+			<table class="table table-condensed">
+				<thead>
+					<tr class="cart_menu">
+						<td class="image">Ảnh sản phẩm</td>
+						<td class="description">Tên sản phẩm</td>
+						<td class="price">Giá</td>
+						<td class="quantity">Số lượng</td>
+						<td class="total">Thành tiền</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					@if(Model.cartitem.Count>0 )
+					{
+						@foreach(var item in Model.cartitem)
+						{
+							<tr>
+								<td class="cart_product">
+									<a href=""><img src="@Url.Content("~/images/Product_home/"+item.Image)" alt=""></a>
+								</td>
+								<td class="cart_description">
+									<h4><a  >@item.productname.Substring(0,24)</a></h4>
+									<p>ID Sản phẩm: @item.productid</p>
+								</td>
+								<td class="cart_price">
+									<p>@item.price.ToString("N0")</p>
+								</td>
+								<td class="cart_quantity">
+									<div class="cart_quantity_button">
+										<a class="cart_quantity_up" asp-controller="Cart" asp-action="tang" asp-route-id="@item.productid"> + </a>
+										<input class="cart_quantity_input" type="text" name="quantity" value="@item.Quanity" autocomplete="off" size="2">
+										<a class="cart_quantity_down" asp-controller="Cart" asp-action="giam" asp-route-id="@item.productid"> - </a>
+									</div>
+								</td>
+								<td class="cart_total">
+									<p class="cart_total_price">@Model.cartitem.Where(x=>x.productid==item.productid).Sum(x=>x.Quanity*x.price).ToString("N0")</p>
+								</td>
+								<td class="cart_delete">
+									<a class="cart_quantity_delete" asp-controller="Cart" asp-action="xoa" asp-route-id="@item.productid"><i class="fa fa-times"></i></a>
+								</td>
+							</tr>
+							
+						}
+						<tr>
+							<td  colspan="6">
+								Tổng tiền : @Model.TotalGrand.ToString("N0")đ
+									
+							</td>
+						</tr>
+					}
+					else
+					{
+						<tr>
+							<td >Không có sản phẩm hiển thị</td>
+						</tr>
+					}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section> <!--/#cart_items-->
