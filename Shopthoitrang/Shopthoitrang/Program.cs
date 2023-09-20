@@ -20,6 +20,18 @@ builder.Services.AddSession(option =>
 });
 //Identity
 
+builder.Services.AddIdentity<AppUserModel,IdentityRole>()
+	.AddEntityFrameworkStores<Datacontext>().AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+	options.Password.RequireDigit = true;
+	options.Password.RequireLowercase = true;
+	options.Password.RequireNonAlphanumeric = false;
+	options.Password.RequireUppercase = false;
+	options.Password.RequiredLength = 5;
+
+});
 //Conect 
 builder.Services.AddDbContext<Datacontext>(options =>
 {
@@ -38,8 +50,6 @@ app.UseStaticFiles();
 app.UseRouting();
 //Ahtnetion
 app.UseAuthentication();
-app.UseAuthorization();
-
 app.UseAuthorization();
 //Areas
 app.MapControllerRoute(

@@ -1,0 +1,43 @@
+﻿@model LoginviewModel
+<section id="form">
+	<!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="login-form">
+					<!--login form-->
+					<h2>Đăng nhập</h2>
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<form asp-area="" asp-controller="Account" asp-action="login">
+						<div class="form-group">
+							<label  class="control-label">Tài khoản</label>
+							<input asp-for="Username" class="form-control" />
+							<span asp-validation-for="Username" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Mật khẩu</label>
+							<input asp-for="Password" class="form-control" />
+							<span asp-validation-for="Password" class="text-danger"></span>
+						</div>
+						<span>
+							<input type="checkbox" class="checkbox">
+							Lưu thông tin
+						</span>
+						<button type="submit" class="btn btn-default">Đăng nhập</button>
+						<span>
+							<label class="control-label">Hoặc</label>
+						</span>
+						<br />
+						<a asp-area="" asp-controller="Account" asp-action="Singup"><span><label class="control-label">Đăng kí tài khoản </label></span></a>
+					</form>
+				</div><!--/login form-->
+			</div>
+
+		</div>
+	</div>
+</section><!--/form-->
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

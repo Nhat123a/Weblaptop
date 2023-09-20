@@ -13,5 +13,7 @@ namespace Shopthoitrang.DataContext
         public DbSet<CategoryModelcs> Categories { get; set; }
         public DbSet<ProductModel> Product { get; set; }
         public DbSet<BannerModels> Banner { get; set; }
+        public DbSet<OrderModel> orders { get; set; }
+        public DbSet<OrderdeltailModel> orderdeltails { get; set; }
     }
 }

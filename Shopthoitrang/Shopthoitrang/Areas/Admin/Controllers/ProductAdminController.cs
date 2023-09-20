@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Shopthoitrang.Data.Removemarks;
@@ -75,12 +76,15 @@ namespace Shopthoitrang.Areas.Admin.Controllers
                 }
                 if(productModel.Imgload != null)
                 {
-                    string Imgdir = Path.Combine(_webHostEnvironment.WebRootPath,"images/product-details");
-                    string Nameimg=Guid.NewGuid().ToString()+"_"+productModel.Imgload.FileName;
+                    string path = "images/product-details";
+
+					string Imgdir = Path.Combine(_webHostEnvironment.WebRootPath,path);
+                    string Nameimg=Guid.NewGuid().ToString()+"-"+productModel.Imgload.FileName;
                     string Pathimg = Path.Combine(Imgdir, Nameimg);
-                    FileStream fs = new FileStream(Pathimg, FileMode.Create);
-                    await productModel.Imgload.CopyToAsync(fs);
-                    fs.Close();
+					using (var fileStream = new FileStream(Pathimg, FileMode.Create))
+					{
+						await productModel.Imgload.CopyToAsync(fileStream);
+					}
                     productModel.Image = Nameimg;
                 }
                 _context.Add(productModel);

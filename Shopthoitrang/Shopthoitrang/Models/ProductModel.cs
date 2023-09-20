@@ -26,7 +26,7 @@ namespace Shopthoitrang.Models
         public BrandModel Brand { get; set; }
         public string Image { get; set; }
         [NotMapped]
-        [FileExtension]
+        [Upload]
         public IFormFile Imgload { get; set; }
     }
 }
