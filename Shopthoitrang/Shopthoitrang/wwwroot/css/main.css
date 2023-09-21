@@ -275,15 +275,18 @@ a#scrollUp i{
 .navbar-toggle .icon-bar {
     background-color: #fff;
 }
+.logo a img{
+	width:126px;
+	height:87px;		
+}
 
-
-.nav.navbar-nav > li:hover > ul.sub-menu{
-  display: block;
-  -webkit-animation: fadeInUp 400ms;
-  -moz-animation: fadeInUp 400ms;
-  -ms-animation: fadeInUp 400ms;
-  -o-animation: fadeInUp 400ms;
-  animation: fadeInUp 400ms;
+.nav.navbar-nav > li:hover > ul.sub-menu {
+	display: block;
+	-webkit-animation: fadeInUp 400ms;
+	-moz-animation: fadeInUp 400ms;
+	-ms-animation: fadeInUp 400ms;
+	-o-animation: fadeInUp 400ms;
+	animation: fadeInUp 400ms;
 }
 
 ul.sub-menu {
@@ -1046,6 +1049,9 @@ h2.title {
 
 #recommended-item-carousel .carousel-inner .item {
   padding-left: 0;
+}
+#recommended-item-carousel .carousel-inner .item img{
+	width:100%;
 }
 
 .recommended-item-control {

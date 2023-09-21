@@ -1,14 +1,20 @@
 ﻿@model IEnumerable<BannerModels>
 
-@foreach (var item in Model)
-{
-    <div class="item active">
-        <div class="row">
 
-            <div class="col-sm-12 ">
-                <!-- Image on the right side -->
-                <img src="~/images/Banner/@item.Imgpath" class="girl img-responsive" alt="" />
+    @foreach (var item in Model)
+    {
+        <div class="item active">
+            <div class="col-sm-6">
+                <h1><span>@item.BannerName</span></h1>
+                <h2>@item.Description</h2>
+                <button type="button" class="btn btn-default get">Get it now</button>
+            </div>
+            <div class="col-sm-6">
+                <img src="@item.Imgpath" class="girl img-responsive" alt="" />
+            <img src="@item.Imgpath" class="pricing" alt="" />
+
             </div>
         </div>
-    </div>
-}
+    }
+
+

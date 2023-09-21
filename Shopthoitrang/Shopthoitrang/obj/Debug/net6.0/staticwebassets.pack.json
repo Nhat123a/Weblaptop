@@ -3157,8 +3157,12 @@
       "PackagePath": "staticwebassets\\images\\Banner\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\Banner\\2.jpg"
+      "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\Anh1.jpg",
+      "PackagePath": "staticwebassets\\images\\Banner\\Anh1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\Anh2.jpg",
+      "PackagePath": "staticwebassets\\images\\Banner\\Anh2.jpg"
     },
     {
       "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\blog\\blog-one.jpg",
@@ -3255,6 +3259,10 @@
     {
       "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\home\\logo.png",
       "PackagePath": "staticwebassets\\images\\home\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\home\\logo2.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\logo2.jpg"
     },
     {
       "Id": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\home\\map.png",

@@ -27,6 +27,6 @@ namespace Shopthoitrang.Models
         public string Image { get; set; }
         [NotMapped]
         [Upload]
-        public IFormFile Imgload { get; set; }
+        public IFormFile imgUpload { get; set; }
     }
 }

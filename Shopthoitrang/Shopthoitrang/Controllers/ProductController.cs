@@ -16,10 +16,9 @@ namespace Shopthoitrang.Controllers
             var product = _datacontext.Product.ToList();
             return View(product);
         }
-        [Route("/{Slug}.html", Name = "chitiet")]
-        public async Task<IActionResult> Details(string Slug)
+        public async Task<IActionResult> Details(int id)
         {
-            var Detail = _datacontext.Product.FirstOrDefault(p => p.Slug == Slug);
+            var Detail = _datacontext.Product.FirstOrDefault(p => p.ProductId == id);
 
             if (Detail == null)
             {
@@ -27,7 +26,7 @@ namespace Shopthoitrang.Controllers
             }
 
             var relatedPosts = _datacontext.Product
-                .Where(p => p.CategoryId == Detail.CategoryId && p.Slug != Slug)
+                .Where(p => p.CategoryId == Detail.CategoryId && p.ProductId != id)
                 .ToList();
 
             ViewBag.lienquan = relatedPosts;

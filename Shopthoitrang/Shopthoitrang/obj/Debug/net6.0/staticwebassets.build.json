@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mNvXImrXN+I3zTfHKH8kHEabiXqiZWFE0rDJ+lMrCRU=",
+  "Hash": "O5NYKytq82H6PmcXMTcsrXHo5cVdt6Awj7hOEwORjio=",
   "Source": "Shopthoitrang",
   "BasePath": "_content/Shopthoitrang",
   "Mode": "Default",
@@ -13447,12 +13447,12 @@
       "OriginalItemSpec": "wwwroot\\images\\Banner\\1.jpg"
     },
     {
-      "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\2.jpg",
+      "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\Anh1.jpg",
       "SourceId": "Shopthoitrang",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\",
       "BasePath": "_content/Shopthoitrang",
-      "RelativePath": "images/Banner/2.jpg",
+      "RelativePath": "images/Banner/Anh1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -13461,7 +13461,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Banner\\2.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\Banner\\Anh1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\Banner\\Anh2.jpg",
+      "SourceId": "Shopthoitrang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\",
+      "BasePath": "_content/Shopthoitrang",
+      "RelativePath": "images/Banner/Anh2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Banner\\Anh2.jpg"
     },
     {
       "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\blog\\blog-one.jpg",
@@ -13870,6 +13887,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\home\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\home\\logo2.jpg",
+      "SourceId": "Shopthoitrang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\",
+      "BasePath": "_content/Shopthoitrang",
+      "RelativePath": "images/home/logo2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\logo2.jpg"
     },
     {
       "Identity": "C:\\Users\\ACE\\OneDrive\\Desktop\\Shop_online\\Shopthoitrang\\Shopthoitrang\\wwwroot\\images\\home\\map.png",

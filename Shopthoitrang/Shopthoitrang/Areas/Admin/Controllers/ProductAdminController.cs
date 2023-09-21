@@ -74,18 +74,16 @@ namespace Shopthoitrang.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("", "Sản phẩm đã tồn tại");
                 }
-                if(productModel.Imgload != null)
+                if(productModel.imgUpload != null)
                 {
-                    string path = "images/product-details";
-
-					string Imgdir = Path.Combine(_webHostEnvironment.WebRootPath,path);
-                    string Nameimg=Guid.NewGuid().ToString()+"-"+productModel.Imgload.FileName;
-                    string Pathimg = Path.Combine(Imgdir, Nameimg);
-					using (var fileStream = new FileStream(Pathimg, FileMode.Create))
-					{
-						await productModel.Imgload.CopyToAsync(fileStream);
-					}
-                    productModel.Image = Nameimg;
+                    string folder = "Meida/Product";
+					string Imgdir = Path.Combine(_webHostEnvironment.WebRootPath,folder);
+                    string creatName = Guid.NewGuid().ToString();
+                    string path = Path.Combine(Imgdir, creatName);
+                    FileStream fs = new FileStream(path,FileMode.Create);
+                    await productModel.imgUpload.CopyToAsync(fs);
+                    fs.Close();
+                    productModel.Image = creatName;
                 }
                 _context.Add(productModel);
                 await _context.SaveChangesAsync();
@@ -95,7 +93,6 @@ namespace Shopthoitrang.Areas.Admin.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "ID", "CategoryName", productModel.CategoryId);
             return View(productModel);
         }
-        //Hàm bỏ dấu
         
 
 

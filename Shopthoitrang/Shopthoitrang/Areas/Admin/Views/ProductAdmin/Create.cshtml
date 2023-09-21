@@ -8,7 +8,7 @@
 <h1 class="alert alert-success">Thêm sản phẩm </h1>
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
+        <form method="post" asp-action="Create" enctype="multipart/form-data" >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label">Tên sản phẩm</label>
@@ -39,9 +39,9 @@
                 <select asp-for="BrandID" class ="form-control" asp-items="ViewBag.BrandID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Imgload" class="control-label">Ảnh sản phẩm</label>
-                <input asp-for="Imgload" class="form-control" />
-                <span asp-validation-for="Imgload" class="text-danger"></span>
+                <label asp-for="imgUpload" class="control-label">Ảnh sản phẩm</label>
+                <input asp-for="imgUpload" type="file" class="form-control" />
+                <span asp-validation-for="imgUpload" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Thêm " class="btn btn-primary" />
